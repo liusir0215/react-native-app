@@ -2,14 +2,14 @@
  * Created by liusheng on 6/1/16.
  */
 import * as types from '../constants/ActionType';
-import movies from '../apis/fetchMovies';
+import movies from '../fetchMethods/fetchMovies';
 
 export function fetchMovies() {
 	return dispatch => {
 		movies.fetchData(movies => {
 			dispatch({
-					type: 'REQUEST_MOVIES',
-					movies: movies.movies,
+				type: 'REQUEST_MOVIES',
+				movies: movies.movies,
 			});
 		})
 	}

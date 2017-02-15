@@ -9,7 +9,7 @@ const initialState = {
 		rowHasChanged: (row1, row2) => row1 !== row2,
 	}),
 }
-function counter(state = initialState, action = {}) {
+function movieReducers(state = initialState, action = {}) {
 	switch (action.type) {
 		case 'REQUEST_MOVIES':
 			return {
@@ -21,4 +21,4 @@ function counter(state = initialState, action = {}) {
 	}
 }
 
-export default counter;
+export default movieReducers;
